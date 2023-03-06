@@ -9,12 +9,12 @@ public class TestMathAndLogicOperators {
 
     @AfterEach
     void outputTestSeparator() {
+        System.out.println("------------------------------------------------------------------------------------------");
         System.out.println("==========================================================================================");
     }
 
     @Test
-    void testArithmeticOperators() {
-
+    void testArithmeticOperatorAdditional() {
         // Сложение
         System.out.println("------------- Test additional.");
 
@@ -25,10 +25,10 @@ public class TestMathAndLogicOperators {
         float addFloatA = -32.2f, addFloatB = -23.3f;
         Assertions.assertEquals(-55.5f, addFloatA + addFloatB, 0.01f); // Проверка float, float
         System.out.println(String.format("Test float+float => %f + %f = %s", addFloatA, addFloatB, (addFloatA + addFloatB)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testArithmeticOperatorSubtraction () {
         // Вычитание
         System.out.println("------------- Test subtraction.");
 
@@ -39,10 +39,10 @@ public class TestMathAndLogicOperators {
         float subFloatA = -32.2f, subFloatB = -23.3f;
         Assertions.assertEquals(-8.9f, subFloatA - subFloatB, 0.01f); // Проверка float, float
         System.out.println(String.format("Test float-float => %f - %f = %s", subFloatA, subFloatB, (subFloatA - subFloatB)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testArithmeticOperatorMultiplication() {
         // Умножение
         System.out.println("------------- Test multiplication.");
 
@@ -53,10 +53,10 @@ public class TestMathAndLogicOperators {
         float multFloatA = 13.37f, multFloatB = -34.89f;
         Assertions.assertEquals(-466.48f, multFloatA * (multFloatB), 0.01f); // float, float
         System.out.println(String.format("Test float*float => %f * %f = %s", multFloatA, multFloatB, (multFloatA * multFloatB)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testArithmeticOperatorDivision() {
         // Деление
         System.out.println("------------- Test division.");
 
@@ -67,10 +67,10 @@ public class TestMathAndLogicOperators {
         float divFloatA = -24.35f, divFloatB = -13.67f;
         Assertions.assertEquals(1.78f, divFloatA /divFloatB, 0.01f); // float, float
         System.out.println(String.format("Test float/float => %f / %f = %s", divFloatA, divFloatB, (divFloatA * divFloatB)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testArithmeticOperatorRemainderOfTheDivision() {
         // Остаток от деления
         System.out.println("------------- Test remainder of the division.");
 
@@ -83,10 +83,10 @@ public class TestMathAndLogicOperators {
         Assertions.assertEquals(-10.68f, remDivFloatA % remDivFloatB, 0.01f); // float, float
         System.out.println(String.format("Test remainder of the division float-float => %f // %f = %s",
                 remDivFloatA, remDivFloatB, (remDivFloatA % remDivFloatB)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testArithmeticOperatorIncrementAndDecrement() {
         // Инкремент, декремент
         System.out.println("------------- Test increment/decrement.");
 
@@ -95,10 +95,10 @@ public class TestMathAndLogicOperators {
         Assertions.assertEquals(779, ++varIntInc); // int, Pre-инкремент и старый Post
         Assertions.assertEquals(778, --varIntInc); // Pre
         Assertions.assertEquals(778, varIntInc--); // Post
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testOverflowByte() {
         // Проверка переполнений при вычислениях byte
         System.out.println("------------- Test overflow Byte.");
 
@@ -111,10 +111,10 @@ public class TestMathAndLogicOperators {
         forCheckOverflowByteB += 1;
         Assertions.assertEquals(-128, forCheckOverflowByteB);
         System.out.println(String.format("Test overflow byte => %d + %d = %s", Byte.MAX_VALUE, 1, (Byte.MAX_VALUE + 1)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testOverflowShort() {
         // Проверка переполнений при вычислениях short
         System.out.println("------------- Test overflow Short.");
 
@@ -127,10 +127,10 @@ public class TestMathAndLogicOperators {
         forCheckOverFlowShortB += 1;
         Assertions.assertEquals(-32768, forCheckOverFlowShortB);
         System.out.println(String.format("Test overflow short => %d + %d = %s", Short.MAX_VALUE, 1, (Short.MAX_VALUE + 1)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testOverflowInt() {
         // Проверка переполнений при вычислениях int
         System.out.println("------------- Test overflow Int.");
 
@@ -143,10 +143,10 @@ public class TestMathAndLogicOperators {
         forCheckOverFlowIntB += 1;
         Assertions.assertEquals(-2147483648, forCheckOverFlowIntB);
         System.out.println(String.format("Test overflow int => %d + %d = %s", Integer.MAX_VALUE, 1, (Integer.MAX_VALUE + 1)));
+    }
 
-        System.out.println("------------------------------------------------------------------------------------------");
-
-
+    @Test
+    void testOverflowFloat() {
         // Проверка переполнений при вычислениях float
         System.out.println("------------- Test overflow Float.");
 
@@ -162,7 +162,6 @@ public class TestMathAndLogicOperators {
 
         System.out.println("------------------------------------------------------------------------------------------");
     }
-
     @Test
     void testComputingOfDataTypes() {
         System.out.println("------------- Test computing combinations of data types.");
